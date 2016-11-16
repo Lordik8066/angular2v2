@@ -13,8 +13,9 @@ export class AppComponent {
         this.todos = []
     }
 
-    addTodo(title: string) {
-        console.log('Добавление задачи' + title);
+    addTodo(input: HTMLInputElement) {
+        let title = input.value;
+        input.value = '';
         this.todos.push(title);
     }
 }
